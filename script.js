@@ -1,5 +1,4 @@
 async function fetchData() {
-    let tab = await getCurrentTab();
     let domain = (new URL(window.location.href));
     domain = domain.hostname;
     console.log("Get doge address for " + domain);
