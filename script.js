@@ -1,12 +1,6 @@
-async function getCurrentTab() {
-    let queryOptions = {active: true, lastFocusedWindow: true};
-    let [tab] = await chrome.tabs.query(queryOptions);
-    return tab;
-}
-
 async function fetchData() {
     let tab = await getCurrentTab();
-    let domain = (new URL(tab.url));
+    let domain = (new URL(window.location.href));
     domain = domain.hostname;
     console.log("Get doge address for " + domain);
 
